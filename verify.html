@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OTP Verification</title>
+    <style>
+        body{
+            background-color: rgb(177, 216, 255);
+            text-align: center;
+        }
+        div { 
+      width: 480px; 
+      margin: auto;
+      padding: 5px; 
+      border: solid black 1px;	
+      border-radius: 5px;  
+      box-shadow: 5px 5px 2px #888;
+      background: #4678a3;
+background: -webkit-radial-gradient(circle, #c1ef0a 0%, #cef1d8 100%);
+background: radial-gradient(circle, #fcc077 0%, #e9bca2 100%);
+  }
+    </style>
+</head>
+<body>
+    <div>
+    <h1>OTP Verification</h1>
+    <form action="/verify_otp" method="POST">
+        <p>An OTP has been sent from {{ 9986269698 }} and {{ satwikkul2002@gmail.com}}.</p>
+        <label for="otp">Enter the 6-digit OTP:</label>
+        <input type="text" id="otp" name="otp"><br><br>
+        <input type="hidden" name="mobile_number" value="{{ mobile_number }}">
+        <input type="hidden" name="email" value="{{ email }}">
+        <input type="submit" value="Verify OTP" href="./check-circle.gif">
+    </div>
+</body>
+</html>
